@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <title>Mapas</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Nameless</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">História</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="historia.html">Principais Eventos</a></li>
+              <li><a class="dropdown-item" href="historia.html#fund">Fundação</a></li>
+              <li><a class="dropdown-item" href="historia.html#guerra1">Primeira Grande Guerra</a></li>
+              <li><a class="dropdown-item" href="historia.html#guerra2">Segunda Grande Guerra</a></li>
+              <li><a class="dropdown-item" href="historia.html#queda">Queda do Conselho</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="mapas.html">Mapas</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Grupos e Organizações</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="grupos.html">Principais Famílias</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="grupos.html#shadow">Caçadores das Sombras</a></li>
+              <li><a class="dropdown-item" href="grupos.html#dragoes">Dragões Dourados</a></li>
+              <li><a class="dropdown-item" href="grupos.html#warmages">Warmages</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="grupos.html#sussurros">Ordem Secreta Sussurros da Floresta</a></li>
+              <li><a class="dropdown-item" href="grupos.html#flechas">Guilda Flechas Letais</a></li>
+              <li><a class="dropdown-item" href="grupos.html#storm">Guilda Storm Blades</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row mb-3">
+      <div class="col text-center">
+        <header>
+          <a id="home"></a>
+          <h1>Mapas, Cidades e Distâncias</h1>
+        </header>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col">
+        <ul class="nav justify-content-center">
+          <li class="nav-item"> <a class="nav-link" href="#vilas">Vilas e Cidades</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#protetorados">Divisão das Regiões em Protetorados</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#distancias">Rotas Comerciais e Distâncias</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr> -->
+    <div class="row mb-1">
+      <div class="col text-center">
+        <h2>Mapa Interativo</h2>
+        <p>Passe o mouse sobre o mapa e clique na localização desejada! :-)</p>
+        <p>Quer consultar o mapa dividido em regiões? Acesse o <a href="protetorados.html">Mapa dos Protetorados</a></p>
+      </div>
+    </div>
+    <!-- Mapeamento de imagem -->
+    <div class="row mb-3">
+      <div class="col text-center" id="image_map">
+        <img src="./images/mapas/mapa-nameless.jpg" width="1042px" height="782px" alt="mapa-nameless"
+          usemap="#mapa-nameless">
+        <map name="mapa-nameless">
+          <area class="my-border" shape="rect" coords="95, 282, 165, 333" href="protetorados.html#goodfellow"
+            alt="goodfellow">
+          <area class="my-border" shape="rect" coords="568, 56, 609, 101" href="protetorados.html#forte-hali"
+            alt="forte-hali">
+          <area class="my-border" shape="rect" coords="676, 408, 749, 476" href="protetorados.html#joia"
+            alt="joia-da-amizade">
+          <area class="my-border" shape="rect" coords="722, 138, 779, 209" href="protetorados.html#modry-drak"
+            alt="modry-drak">
+          <area class="my-border" shape="rect" coords="483, 490, 571, 578" href="protetorados.html#maresias"
+            alt="maresias">
+          <area class="my-border" shape="rect" coords="413, 442, 475, 506" href="protetorados.html#taurian"
+            alt="taurian">
+          <area class="my-border" shape="rect" coords="269, 492, 347, 569" href="protetorados.html#porto-belo"
+            alt="porto-belo">
+          <area class="my-border" shape="rect" coords="142, 426, 223, 500" href="protetorados.html#madreperola"
+            alt="enseada-madreperola">
+          <area class="my-border" shape="rect" coords="193, 386, 262, 413" href="protetorados.html#sihuain"
+            alt="entreposto-sihuain">
+          <area class="my-border" shape="rect" coords="85, 352, 166, 402" href="protetorados.html#recifes"
+            alt="recifes">
+          <area class="my-border" shape="rect" coords="174, 337, 240, 374" href="protetorados.html#equinopolis"
+            alt="equinopolis">
+          <area class="my-border" shape="rect" coords="114, 223, 196, 270" href="protetorados.html#bonanza"
+            alt="bonanza">
+          <area class="my-border" shape="rect" coords="283, 359, 431, 420" href="protetorados.html#elfica"
+            alt="floresta-elfica">
+          <area class="my-border" shape="rect" coords="254, 267, 315, 296" href="protetorados.html#elindarin"
+            alt="elindarin">
+          <area class="my-border" shape="rect" coords="212, 230, 250, 260" href="protetorados.html#fortuna"
+            alt="fortuna">
+          <area class="my-border" shape="rect" coords="236, 126, 312, 201" href="protetorados.html#keep-caveiras"
+            alt="keep-caveiras">
+          <area class="my-border" shape="rect" coords="340, 121, 400, 167" href="protetorados.html#ironforge"
+            alt="ironforge">
+          <area class="my-border" shape="rect" coords="325, 215, 387, 255" href="protetorados.html#aldorar"
+            alt="aldorar">
+          <area class="my-border" shape="rect" coords="418, 123, 477, 180" href="protetorados.html#esperanza"
+            alt="esperanza">
+          <area class="my-border" shape="rect" coords="413, 304, 472, 335" href="protetorados.html#rafarindo"
+            alt="rafarindo">
+          <area class="my-border" shape="rect" coords="451, 347, 507, 375" href="protetorados.html#ruinas-rainha"
+            alt="ruinas-rainha">
+          <area class="my-border" shape="rect" coords="518, 395, 599, 437" href="protetorados.html#eldunari"
+            alt="eldunari">
+          <area class="my-border" shape="rect" coords="587, 448, 665, 487" href="protetorados.html#cherrywood"
+            alt="cherrywood">
+          <area class="my-border" shape="rect" coords="765, 449, 814, 503" href="protetorados.html#fort-strongwill"
+            alt="fort-strongwill">
+          <area class="my-border" shape="rect" coords="623, 536, 685, 565" href="protetorados.html#templo-natureza"
+            alt="templo-natureza">
+          <area class="my-border" shape="rect" coords="672, 490, 723, 516" href="protetorados.html#ultimo-descanso"
+            alt="ultimo-descanso">
+          <area class="my-border" shape="rect" coords="719, 526, 797, 568" href="protetorados.html#carnablood"
+            alt="carnablood">
+          <area class="my-border" shape="rect" coords="841, 532, 896, 571" href="protetorados.html#rochele"
+            alt="rochele">
+          <area class="my-border" shape="rect" coords="833, 453, 872, 483" href="protetorados.html#ventarin"
+            alt="ventarin">
+          <area class="my-border" shape="rect" coords="765, 412, 817, 434" href="protetorados.html#grondar"
+            alt="grondar">
+          <area class="my-border" shape="rect" coords="883, 411, 937, 455" href="protetorados.html#porto-coroa"
+            alt="porto-da-coroa">
+          <area class="my-border" shape="rect" coords="890, 375, 950, 403" href="protetorados.html#marlin" alt="marlin">
+          <area class="my-border" shape="rect" coords="766, 365, 839, 401" href="protetorados.html#bosque-nobres"
+            alt="bosque-dos-nobres">
+          <area class="my-border" shape="rect" coords="730, 332, 760, 376" href="protetorados.html#carvalho"
+            alt="carvalho-dourado">
+          <area class="my-border" shape="rect" coords="569, 345, 636, 379" href="protetorados.html#middleway"
+            alt="middleway">
+          <area class="my-border" shape="rect" coords="494, 270, 574, 318" href="protetorados.html#paraiso-branco"
+            alt="paraiso-branco">
+          <area class="my-border" shape="rect" coords="528, 166, 587, 212" href="protetorados.html#brie" alt="brie">
+          <area class="my-border" shape="rect" coords="488, 94, 526, 163" href="protetorados.html#keep-mercenarios"
+            alt="keep-mercenarios">
+          <area class="my-border" shape="rect" coords="628, 279, 695, 315" href="protetorados.html#floresta-corvos"
+            alt="floresta-dos-corvos">
+          <area class="my-border" shape="rect" coords="581, 240, 676, 268" href="protetorados.html#ravencliff"
+            alt="ravencliff">
+          <area class="my-border" shape="rect" coords="946, 307, 1021, 340" href="protetorados.html#calamdra"
+            alt="calamdra">
+          <area class="my-border" shape="rect" coords="869, 288, 924, 335" href="protetorados.html#grand-mirill"
+            alt="grand-mirill">
+          <area class="my-border" shape="rect" coords="720, 274, 771, 318" href="protetorados.html#malbeque"
+            alt="malbeque">
+          <area class="my-border" shape="rect" coords="805, 261, 855, 312" href="protetorados.html#aldoran"
+            alt="aldoran">
+          <area class="my-border" shape="rect" coords="632, 185, 673, 221" href="protetorados.html#stonemasonry"
+            alt="stonemasonry">
+          <area class="my-border" shape="rect" coords="682, 164, 713, 199" href="protetorados.html#vallerin"
+            alt="recifes">
+          <area class="my-border" shape="rect" coords="616, 139, 660, 170" href="protetorados.html#goldbeards"
+            alt="goldbeards">
+          <area class="my-border" shape="rect" coords="701, 228, 758, 261" href="protetorados.html#riachuelo"
+            alt="riachuelo">
+          <area class="my-border" shape="rect" coords="496, 43, 551, 76" href="protetorados.html#brumir" alt="brumir">
+          <area class="my-border" shape="rect" coords="926, 234, 987, 274" href="protetorados.html#brumas" alt="brumas">
+          <area class="my-border" shape="rect" coords="599, 113, 647, 127" href="protetorados.html#portoes"
+            alt="portoes-de-ferro">
+          <area class="my-border" shape="rect" coords="916, 194, 955, 221" href="protetorados.html#plato"
+            alt="tribo-snack">
+          <area class="my-border" shape="rect" coords="847, 178, 891, 220" href="protetorados.html#garrash"
+            alt="garrash">
+          <area class="my-border" shape="rect" coords="789, 175, 822, 206" href="protetorados.html#rinur" alt="rinur">
+          <area class="my-border" shape="rect" coords="806, 112, 852, 163" href="protetorados.html#iririnur"
+            alt="iririnur">
+          <area class="my-border" shape="rect" coords="752, 104, 797, 129" href="protetorados.html#pantano"
+            alt="pantano">
+          <area class="my-border" shape="rect" coords="900, 40, 969, 92" href="protetorados.html#biblioteca"
+            alt="biblioteca-branca">
+          <area class="my-border" shape="rect" coords="778, 70, 830, 98" href="protetorados.html#nir" alt="nir">
+          <area class="my-border" shape="rect" coords="772, 14, 852, 51" href="protetorados.html#brantur" alt="brantur">
+          <area class="my-border" shape="rect" coords="695, 67, 742, 96" href="protetorados.html#floresta-negra"
+            alt="floresta-negra">
+          <area class="my-border" shape="rect" coords="634, 60, 676, 95" href="protetorados.html#loth-irian"
+            alt="loth-irian">
+            <area class="my-border" shape="rect" coords="783, 228, 879, 249" href="protetorados.html#montanhas-lantror"
+            alt="montanhas-lantror">
+        </map>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col text-center">
+        <a id="distancias"></a>
+        <h2>Rotas Comerciais e Distâncias</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Consideramos as distâncias em viagens a cavalo e com dia bom.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table table-bordered border-primary table-light table-striped">
+          <thead class="table-primary text-center table-bordered border-primary">
+            <tr>
+              <th>Ponto de Origem</th>
+              <th>Ponto de Destino</th>
+              <th>Distância (em dias)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coroa de Maresias (Capital)</td>
+              <td>Jóia da Amizade</td>
+              <td>4 dias</td>
+            </tr>
+            <tr>
+              <td>Paraíso Branco</td>
+              <td>Middleway</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Middleway</td>
+              <td>Jóia da Amizade</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Jóia da Amizade</td>
+              <td>Fortaleza dos Strongwill</td>
+              <td>1 dia e meio</td>
+            </tr>
+            <tr>
+              <td>Jóia da Amizade</td>
+              <td>Cidade de Cherrywood</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade de Cherrywood</td>
+              <td>Coroa de Maresias (Capital)</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Jóia da Amizade</td>
+              <td>Cidade Grondar</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Jóia da Amizade</td>
+              <td>Porto da Coroa</td>
+              <td>2 dias e meio</td>
+            </tr>
+            <tr>
+              <td>Jóia da Amizade </td>
+              <td>Vila Carvalho Dourado</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Fortaleza dos Strongwill</td>
+              <td>Floresta Carnablood</td>
+              <td>4 horas</td>
+            </tr>
+            <tr>
+              <td>Fortaleza dos Strongwill </td>
+              <td>Cidade de Ventarim</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Cidade Grondar</td>
+              <td>Vila Carvalho Dourado</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Cidade de Ventarin </td>
+              <td>Porto da Coroa</td>
+              <td>10 horas</td>
+            </tr>
+            <tr>
+              <td>Coroa de Maresias (Capital)</td>
+              <td>Porto Belo</td>
+              <td>4 dias</td>
+            </tr>
+            <tr>
+              <td>Coroa de Maresias (Capital)</td>
+              <td>Floresta Élfica</td>
+              <td>3 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade de Porto da Coroa</td>
+              <td>Cidade de Calamdra</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade de Calamdra</td>
+              <td>Cidade Altoran</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade Altoran</td>
+              <td>Vila Riachuelo</td>
+              <td>1 dia e meio</td>
+            </tr>
+            <tr>
+              <td>Cidade Altoran</td>
+              <td>Vila Malbeque</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Vila Malbeque</td>
+              <td>Vila Ravencliff</td>
+              <td>3 dias</td>
+            </tr>
+            <tr>
+              <td>Vila Ravencliff</td>
+              <td>Vila Riachuelo</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Vila Ravencliff</td>
+              <td>Vila de Brie</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Vila Ravencliff</td>
+              <td>Paraíso Branco</td>
+              <td>3 dias</td>
+            </tr>
+            <tr>
+              <td>Vila de Brie</td>
+              <td>Vila Esperanza</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Paraíso Branco</td>
+              <td>Vila Aldorar</td>
+              <td>3 dias</td>
+            </tr>
+            <tr>
+              <td>Paraíso Branco</td>
+              <td>Floresta Élfica</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Vila Aldorar</td>
+              <td>Floresta Èlfica</td>
+              <td>1 dia e meio</td>
+            </tr>
+            <tr>
+              <td>Cidade de Elindarin</td>
+              <td>Floresta Élfica</td>
+              <td>2 horas</td>
+            </tr>
+            <tr>
+              <td>Bonanza</td>
+              <td>Floresta Élfica</td>
+              <td>1 dia e meio</td>
+            </tr>
+            <tr>
+              <td>Bonanza</td>
+              <td>Cidade dos Recifes</td>
+              <td>4 dias</td>
+            </tr>
+            <tr>
+              <td>Porto Belo</td>
+              <td>Enseada da Madrepérola</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Enseada da Madrepérola</td>
+              <td>Cidade dos Recifes</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Enseada da Madrepérola</td>
+              <td>Entreposto Sihuain</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Bonanza</td>
+              <td>Keep dos Caveiras</td>
+              <td>4 dias</td>
+            </tr>
+            <tr>
+              <td>Vila Aldorar</td>
+              <td>Ironforge</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Vila Esperanza</td>
+              <td>Keep dos Mercenários</td>
+              <td>10 horas</td>
+            </tr>
+            <tr>
+              <td>Keep dos Mercenários</td>
+              <td>Forte HaLi</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Keep do Mercenários</td>
+              <td>Vila Brumir</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Vila Riachuelo</td>
+              <td>Goldbeards</td>
+              <td>4 dias</td>
+            </tr>
+            <tr>
+              <td>Vila Riachuelo</td>
+              <td>Stonemansory</td>
+              <td>2 dia e meio</td>
+            </tr>
+            <tr>
+              <td>Vila Riachuelo</td>
+              <td>Torre de Modry Drak</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Golbeards </td>
+              <td>Stonemansory</td>
+              <td>14 horas</td>
+            </tr>
+            <tr>
+              <td>Goldbeards</td>
+              <td>Torre de Modry Drak</td>
+              <td>3 dias</td>
+            </tr>
+            <tr>
+              <td>Goldbeards</td>
+              <td>Garrash</td>
+              <td>5 ou 6 dias</td>
+            </tr>
+            <tr>
+              <td>Grondar</td>
+              <td>Bosque dos Nobres</td>
+              <td>4 horas</td>
+            </tr>
+            <tr>
+              <td>Floresta Carnablood</td>
+              <td>Templo do Deus da Natureza</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Cidade de Cherrywood</td>
+              <td>Templo do Deus da Natureza</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Coroa de Maresias (Capital)</td>
+              <td>Templo do Deus da Natureza</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Coroa de Maresias (Capital)</td>
+              <td>Floresta de Eldunári</td>
+              <td>1 dia e meio</td>
+            </tr>
+            <tr>
+              <td>Middleway</td>
+              <td>Ruínas da Rainha</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Paraíso Branco</td>
+              <td>Ruínas da Rainha</td>
+              <td>6 horas</td>
+            </tr>
+            <tr>
+              <td>Vila Aldorar</td>
+              <td>Ruínas da Rainha</td>
+              <td>4 dias</td>
+            </tr>
+            <tr>
+              <td>Forte HaLi</td>
+              <td>Vila Brumir</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Forte HaLi</td>
+              <td>Portões de Ferro</td>
+              <td>4 horas</td>
+            </tr>
+            <tr>
+              <td>Coroa de Maresias (Capital)</td>
+              <td>Taurian</td>
+              <td>1 dia</td>
+            </tr>
+            <tr>
+              <td>Forte HaLi</td>
+              <td>Cidade de Iririmur</td>
+              <td>8 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade de Iririmur</td>
+              <td>Cidade de Brantur</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Forte HaLi</td>
+              <td>Brantur</td>
+              <td>4 dias e meio</td>
+            </tr>
+            <tr>
+              <td>Goldbeards</td>
+              <td>Rimur</td>
+              <td>3 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade de Vallerin</td>
+              <td>Brie</td>
+              <td>2 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade de Vallerin</td>
+              <td>Iririmur</td>
+              <td>10 dias</td>
+            </tr>
+            <tr>
+              <td>Cidade de Vallerin</td>
+              <td>Pântano da Dragonslayer</td>
+              <td>2 dias</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+   
+    <div class="row mb-3">
+      <div class="col text-center">
+        <footer>
+          <p><a onclick="toTop()" class="btn btn-primary text-center">TOPO DA PÁGINA</a></p>
+          <small>Copyright © 2021 Fábio LOC / Renata PN</small>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script> -->
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+  <script>
+    function toTop() {
+      window.scroll(0, 0);
+    }
+  </script>
+</body>
+
+</html>
